@@ -1,6 +1,6 @@
 import React from 'react';
 
-const QuoteCard = (props) => {
+const QuoteCard = ({quote}) => {
   debugger
   return (
     <div>
