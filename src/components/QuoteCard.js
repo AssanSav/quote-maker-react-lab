@@ -1,7 +1,9 @@
 import React from 'react';
 
-const QuoteCard = (props) =>
-  <div>
+const QuoteCard = (props) => {
+  debugger
+  return (
+    <div>
     <div className="card card-inverse card-success card-primary mb-3 text-center">
       <div className="card-block">
         <blockquote className="card-blockquote">
@@ -33,6 +35,8 @@ const QuoteCard = (props) =>
         {/* <div>Votes: {Render Quote Votes}</div> */}
       </div>
     </div>
-  </div>;
+  </div>
+  )}
+  
 
 export default QuoteCard;
