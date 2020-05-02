@@ -3,6 +3,9 @@ import React from 'react';
 
 const QuoteCard = (props) => {
   const { quote, removeQuote, upvoteQuote, downvoteQuote } = props
+  if (quote.author !== "" && quote.content !== "") {
+    
+  }
   return (
     <div>
     <div className="card card-inverse card-success card-primary mb-3 text-center">

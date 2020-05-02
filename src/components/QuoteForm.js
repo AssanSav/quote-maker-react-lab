@@ -8,7 +8,8 @@ class QuoteForm extends Component {
   state = {
     author: "",
     content: "",
-    votes: 0
+    votes: 0,
+    loading: false
   }
 
   handleOnChange = event => {
@@ -19,11 +20,14 @@ class QuoteForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault()
-    this.props.addQuote([{...this.state, id: uuid()}])
-    this.setState({
-      content: "",
-      author: ""
-    })
+    if (this.state.author !== "" && this.state.content !== "") {
+      this.props.addQuote([{ ...this.state, id: uuid() }])
+        this.setState({
+          content: "",
+          author: ""
+        })
+    }
+    
   }
 
   render() {
