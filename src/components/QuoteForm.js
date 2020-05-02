@@ -7,19 +7,19 @@ class QuoteForm extends Component {
 
   state = {
     author: "",
-    content: ""
+    content: "",
+    votes: 0
   }
 
   handleOnChange = event => {
     this.setState({
-      [event.target.name]: event.target.value,
-      id: uuid()
+      [event.target.name]: event.target.value
     })
   }
 
   handleOnSubmit = event => {
     event.preventDefault()
-    this.props.addQuote(this.state)
+    this.props.addQuote([{...this.state, id: uuid()}])
     this.setState({
       content: "",
       author: ""
